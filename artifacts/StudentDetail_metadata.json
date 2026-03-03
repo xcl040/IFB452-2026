@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "studentName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "studentNo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"IFB452 2026 S4/Week 1/Hello.sol": "StudentDetail"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"IFB452 2026 S4/Week 1/Hello.sol": {
+			"keccak256": "0xaf478935ad755dd845729ccf166c26deb947f0ea5de154e4d605fd180630ca01",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8b212abbab50dc4482234160f8385f6ad6fc9ab84f6435ea911b7cbf685288fb",
+				"dweb:/ipfs/QmTco1PJDpRmdCohYzsGzaC4MbZEf9uNR1RRS8FpZJ8L5u"
+			]
+		}
+	},
+	"version": 1
+}
