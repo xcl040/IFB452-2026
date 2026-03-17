@@ -1,0 +1,219 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "contractId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "contractName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address[]",
+						"name": "stakeholders",
+						"type": "address[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "qualityCriteria",
+						"type": "string"
+					}
+				],
+				"name": "QualityContractCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_contractId",
+						"type": "uint256"
+					}
+				],
+				"name": "completeQualityContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "contractCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_contractName",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_stakeholders",
+						"type": "address[]"
+					},
+					{
+						"internalType": "string",
+						"name": "_qualityCriteria",
+						"type": "string"
+					}
+				],
+				"name": "createQualityContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_contractId",
+						"type": "uint256"
+					}
+				],
+				"name": "getQualityContractDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_contractId",
+						"type": "uint256"
+					}
+				],
+				"name": "performQualityCheck",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "qualityContracts",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "contractName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "qualityCriteria",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isCompleted",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Week 4/week_4_activity_2.sol": "QualityContract"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Week 4/week_4_activity_2.sol": {
+			"keccak256": "0xe22a53f2eb782d32db7da10c87b6e56ee45a8bbbbf998ae10f83c05895620f5d",
+			"urls": [
+				"bzz-raw://b8525474155ace2dc0765bddad55166e55ab9e0b67d370db4cba3718504fe3b3",
+				"dweb:/ipfs/QmTEDCRkkXPCd53vWkSPETwzHd2JpGbAjp15ywj9wtT32f"
+			]
+		}
+	},
+	"version": 1
+}
