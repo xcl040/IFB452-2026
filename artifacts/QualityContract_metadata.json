@@ -1,12 +1,18 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "initialStakeholder",
+						"type": "address"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -16,47 +22,16 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "contractId",
+						"name": "newScore",
 						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "contractName",
-						"type": "string"
-					},
-					{
-						"indexed": false,
-						"internalType": "address[]",
-						"name": "stakeholders",
-						"type": "address[]"
-					},
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "qualityCriteria",
-						"type": "string"
 					}
 				],
-				"name": "QualityContractCreated",
+				"name": "updateQualityScore",
 				"type": "event"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_contractId",
-						"type": "uint256"
-					}
-				],
-				"name": "completeQualityContract",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "contractCount",
+				"name": "qualityScore",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -68,65 +43,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_contractName",
-						"type": "string"
-					},
-					{
-						"internalType": "address[]",
-						"name": "_stakeholders",
-						"type": "address[]"
-					},
-					{
-						"internalType": "string",
-						"name": "_qualityCriteria",
-						"type": "string"
-					}
-				],
-				"name": "createQualityContract",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_contractId",
-						"type": "uint256"
-					}
-				],
-				"name": "getQualityContractDetails",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					},
-					{
-						"internalType": "address[]",
-						"name": "",
-						"type": "address[]"
-					},
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					},
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "owner",
+				"name": "singleStakeholder",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -141,42 +59,13 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_contractId",
+						"name": "newScore",
 						"type": "uint256"
 					}
 				],
-				"name": "performQualityCheck",
+				"name": "updateScore",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "qualityContracts",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "contractName",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "qualityCriteria",
-						"type": "string"
-					},
-					{
-						"internalType": "bool",
-						"name": "isCompleted",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -193,9 +82,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Week 4/week_4_activity_2.sol": "QualityContract"
+			"Week 2/Quality_contract.sol": "QualityContract"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -207,11 +96,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"Week 4/week_4_activity_2.sol": {
-			"keccak256": "0xe22a53f2eb782d32db7da10c87b6e56ee45a8bbbbf998ae10f83c05895620f5d",
+		"Week 2/Quality_contract.sol": {
+			"keccak256": "0x81868b0fff6d89123b7ff9a3b48bffbfbe851597c1b2f17b25739abb49c5b760",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://b8525474155ace2dc0765bddad55166e55ab9e0b67d370db4cba3718504fe3b3",
-				"dweb:/ipfs/QmTEDCRkkXPCd53vWkSPETwzHd2JpGbAjp15ywj9wtT32f"
+				"bzz-raw://24195ee3a1c4b44357cbc6780b948bc7761b44d3473470fdadb4105b665411ab",
+				"dweb:/ipfs/QmTyEX4hHSqNbW3aDBAHUP1quQcrXR6uGQRXM23BcCcVNd"
 			]
 		}
 	},
