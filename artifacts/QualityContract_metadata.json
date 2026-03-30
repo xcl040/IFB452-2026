@@ -8,9 +8,9 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "initialStakeholder",
-						"type": "address"
+						"internalType": "address[]",
+						"name": "initialStakeholders",
+						"type": "address[]"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -26,8 +26,66 @@
 						"type": "uint256"
 					}
 				],
-				"name": "updateQualityScore",
+				"name": "QualityScoreUpdated",
 				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newStakeholder",
+						"type": "address"
+					}
+				],
+				"name": "StakeholderAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newStakeholder",
+						"type": "address"
+					}
+				],
+				"name": "addStakeholder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getStakeholderCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "isStakeholder",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -43,13 +101,38 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "singleStakeholder",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "stakeholderList",
 				"outputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "stakeholders",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -82,7 +165,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Week 2/Quality_contract.sol": "QualityContract"
+			"Week 3/week03.sol": "QualityContract"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -96,12 +179,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"Week 2/Quality_contract.sol": {
-			"keccak256": "0x81868b0fff6d89123b7ff9a3b48bffbfbe851597c1b2f17b25739abb49c5b760",
+		"Week 3/week03.sol": {
+			"keccak256": "0xd1011715df5e0951e1f2fe419bef827aadd3cf64442f18a97a5cbdb413e2e7a5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://24195ee3a1c4b44357cbc6780b948bc7761b44d3473470fdadb4105b665411ab",
-				"dweb:/ipfs/QmTyEX4hHSqNbW3aDBAHUP1quQcrXR6uGQRXM23BcCcVNd"
+				"bzz-raw://ae707ba057d0c0f9b9b9e3dde6cef47a81b0d22ab07dac51547d50fa65fcf0d4",
+				"dweb:/ipfs/QmTKDPYTw9Z6nPHLf4fAm4AUwF4iem2gQDUq6murtzTobb"
 			]
 		}
 	},
