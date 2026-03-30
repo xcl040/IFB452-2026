@@ -6,58 +6,26 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address[]",
-						"name": "initialStakeholders",
-						"type": "address[]"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
 						"internalType": "uint256",
-						"name": "newScore",
+						"name": "_contractId",
 						"type": "uint256"
 					}
 				],
-				"name": "QualityScoreUpdated",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "newStakeholder",
-						"type": "address"
-					}
-				],
-				"name": "StakeholderAdded",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "newStakeholder",
-						"type": "address"
-					}
-				],
-				"name": "addStakeholder",
+				"name": "completeQualityContract",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "getStakeholderCount",
+				"name": "contractCount",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -71,13 +39,51 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "user",
-						"type": "address"
+						"internalType": "string",
+						"name": "_contractName",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_stakeholders",
+						"type": "address[]"
+					},
+					{
+						"internalType": "string",
+						"name": "_qualityCriteria",
+						"type": "string"
 					}
 				],
-				"name": "isStakeholder",
+				"name": "createQualityContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_contractId",
+						"type": "uint256"
+					}
+				],
+				"name": "getQualityContractDetails",
 				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
 					{
 						"internalType": "bool",
 						"name": "",
@@ -89,26 +95,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "qualityScore",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "stakeholderList",
+				"name": "owner",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -122,33 +109,43 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "_contractId",
+						"type": "uint256"
 					}
 				],
-				"name": "stakeholders",
+				"name": "performQualityCheck",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "qualityContracts",
 				"outputs": [
+					{
+						"internalType": "string",
+						"name": "contractName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "qualityCriteria",
+						"type": "string"
+					},
 					{
 						"internalType": "bool",
-						"name": "",
+						"name": "isCompleted",
 						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "newScore",
-						"type": "uint256"
-					}
-				],
-				"name": "updateScore",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -165,7 +162,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Week 3/week03.sol": "QualityContract"
+			"Week 4/week_4_activity_2.sol": "QualityContract"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -179,12 +176,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"Week 3/week03.sol": {
-			"keccak256": "0xd1011715df5e0951e1f2fe419bef827aadd3cf64442f18a97a5cbdb413e2e7a5",
+		"Week 4/week_4_activity_2.sol": {
+			"keccak256": "0xb70d6c1297e306e178a07ad9986097b50c4103b34a6ec47de498701656c74eab",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ae707ba057d0c0f9b9b9e3dde6cef47a81b0d22ab07dac51547d50fa65fcf0d4",
-				"dweb:/ipfs/QmTKDPYTw9Z6nPHLf4fAm4AUwF4iem2gQDUq6murtzTobb"
+				"bzz-raw://ea600f26cf1cb1aa8ec4a1d64cfc5cff8004f38f9c335826e226f1116b901d66",
+				"dweb:/ipfs/QmTahmuuhkSRxPd3hvuGTBZKSyooeKzQkDq5EE3TYy8Zwc"
 			]
 		}
 	},
