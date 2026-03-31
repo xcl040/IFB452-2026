@@ -13,9 +13,6 @@ contract QualityContract{
     
     }
 
-    
-
-
     constructor(address initialStakeholder) {
         require(
             initialStakeholder != address(0),

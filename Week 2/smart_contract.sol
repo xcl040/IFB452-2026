@@ -9,12 +9,12 @@ _;
 }
 event ExamScoreUpdated(uint256 newScore);
 constructor(address initialStudent) {
-require(initialStudent != address(0), "Invalid initial student address");
-singleStudent = initialStudent;
-examScore = 0;
+    require(initialStudent != address(0), "Invalid initial student address");
+    singleStudent = initialStudent;
+    examScore = 0;
 }
 function updateScore(uint256 newScore) external onlyStudent {
-examScore = newScore;
-emit ExamScoreUpdated(newScore);
+    examScore = newScore;
+    emit ExamScoreUpdated(newScore);
 }
 }
